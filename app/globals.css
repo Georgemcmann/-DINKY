@@ -60,7 +60,6 @@ h2 {
 
 section {
   padding: clamp(48px, 8vw, 70px) 6%;
-  max-width: 1100px;
   margin: 0 auto;
 }
 
