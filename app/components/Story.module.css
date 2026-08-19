@@ -1,0 +1,41 @@
+.eyebrow {
+  color: var(--sol-a);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: 0.85;
+  max-width: 720px;
+}
+
+.body + .body {
+  margin-top: 16px;
+}
+
+.highlight {
+  color: var(--gold);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.nicknames {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.pill {
+  background: linear-gradient(90deg, rgba(255, 204, 0, 0.15), rgba(153, 69, 255, 0.1));
+  border: 1px solid rgba(255, 204, 0, 0.4);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}

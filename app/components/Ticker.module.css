@@ -1,0 +1,28 @@
+.wrap {
+  background: var(--gold);
+  color: #0b0b0c;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+  border-bottom: 2px solid #0b0b0c;
+}
+
+.track {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 0.9rem;
+  animation: scroll 22s linear infinite;
+}
+
+.track span {
+  margin: 0 24px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

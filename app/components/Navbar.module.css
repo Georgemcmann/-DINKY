@@ -1,0 +1,158 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 5%;
+  background: rgba(11, 11, 12, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--gold);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+.logoImg {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  object-fit: cover;
+}
+
+.links {
+  display: flex;
+  gap: 26px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.links a {
+  opacity: 0.85;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.links a:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.ctaMobile {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cta {
+  background: linear-gradient(90deg, var(--sol-a), var(--sol-b));
+  color: #0b0b0c;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(153, 69, 255, 0.4);
+  transition: transform 0.2s;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
+.menuBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--cream);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.barOpen1 {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barOpen2 {
+  opacity: 0;
+}
+
+.barOpen3 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 820px) {
+  .links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(11, 11, 12, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--gold);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .linksOpen {
+    max-height: 320px;
+  }
+
+  .links a {
+    padding: 16px 6%;
+    border-top: 1px solid #262626;
+  }
+
+  .ctaMobile {
+    display: block;
+    margin: 14px 6% 20px;
+    padding: 12px 20px;
+    text-align: center;
+    background: linear-gradient(90deg, var(--gold), var(--gold-2));
+    color: #0b0b0c;
+    font-weight: 800;
+    border-radius: 30px;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 14px 5%;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
+}
