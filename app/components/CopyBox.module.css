@@ -1,0 +1,36 @@
+.caBox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--black-2);
+  border: 1px solid #333;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  cursor: pointer;
+  max-width: 100%;
+  transition: border-color 0.2s;
+}
+
+.caBox:hover {
+  border-color: var(--gold);
+}
+
+.label {
+  color: var(--gold);
+  font-weight: 800;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.caText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+.copyIcon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}

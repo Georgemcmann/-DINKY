@@ -1,0 +1,38 @@
+.eyebrow {
+  color: var(--sol-a);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #262626;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.frame:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.frame:hover .img {
+  transform: scale(1.06);
+}

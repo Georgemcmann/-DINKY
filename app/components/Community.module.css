@@ -1,0 +1,54 @@
+.eyebrow {
+  color: var(--sol-a);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: 0.85;
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.card {
+  background: var(--black-2);
+  border: 1px solid #262626;
+  border-radius: 18px;
+  padding: 28px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  background: #1c1c1e;
+}
+
+.emoji {
+  font-size: 1.7rem;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.sub {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
