@@ -3,15 +3,17 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  padding: 80px 6% 60px;
+  gap: clamp(30px, 5vw, 50px);
+  padding: clamp(50px, 8vw, 80px) 6% clamp(40px, 6vw, 60px);
   max-width: 1300px;
   margin: 0 auto;
+  min-width: 0;
 }
 
 .text {
   flex: 1 1 460px;
   max-width: 600px;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -23,24 +25,26 @@
   color: var(--gold);
   padding: 6px 16px;
   border-radius: 30px;
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
   font-weight: 700;
   letter-spacing: 0.05em;
-  margin-bottom: 22px;
+  margin-bottom: clamp(16px, 3vw, 22px);
 }
 
 .dot {
   width: 8px;
   height: 8px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--sol-a);
   box-shadow: 0 0 8px var(--sol-a);
 }
 
 .h1 {
-  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-size: clamp(2rem, 5.5vw, 4.2rem);
   line-height: 1.05;
-  margin-bottom: 22px;
+  margin-bottom: clamp(16px, 3vw, 22px);
+  overflow-wrap: break-word;
 }
 
 .gold {
@@ -51,10 +55,10 @@
 }
 
 .sub {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   opacity: 0.85;
-  line-height: 1.9;
-  margin-bottom: 38px;
+  line-height: 1.7;
+  margin-bottom: clamp(24px, 4vw, 38px);
   max-width: 740px;
 }
 
@@ -68,6 +72,7 @@
 .imgWrap {
   flex: 1 1 380px;
   max-width: 460px;
+  min-width: 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -86,13 +91,65 @@
   100% {
     transform: translateY(0px) rotate(-1deg);
   }
+
   50% {
     transform: translateY(-18px) rotate(1deg);
   }
 }
 
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    max-width: 700px;
+  }
+
+  .btns {
+    justify-content: center;
+  }
+
+  .imgWrap {
+    max-width: 400px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
   .hero {
-    padding: 60px 5% 40px;
+    width: 100%;
+    padding: 50px 20px 40px;
+    gap: 35px;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .sub {
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .imgWrap {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .img {
+    max-width: 100%;
   }
 }
