@@ -1,16 +1,26 @@
 .caBox {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
   background: var(--black-2);
   border: 1px solid #333;
+
   padding: 12px 18px;
   border-radius: 12px;
+
   font-family: 'Courier New', monospace;
   font-size: 0.82rem;
+
   cursor: pointer;
-  max-width: 100%;
+
   transition: border-color 0.2s;
+
+  box-sizing: border-box;
 }
 
 .caBox:hover {
@@ -18,19 +28,43 @@
 }
 
 .label {
+  flex: 0 0 auto;
+
   color: var(--gold);
   font-weight: 800;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .caText {
+  flex: 1 1 auto;
+  min-width: 0;
+
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
   opacity: 0.8;
 }
 
 .copyIcon {
+  flex: 0 0 auto;
   font-size: 1rem;
-  flex-shrink: 0;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .caBox {
+    width: 100%;
+    padding: 11px 14px;
+    gap: 8px;
+    font-size: 0.72rem;
+  }
+
+  .caText {
+    min-width: 0;
+  }
+
+  .copyIcon {
+    font-size: 0.9rem;
+  }
 }
